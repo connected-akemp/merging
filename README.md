@@ -105,3 +105,34 @@ These are the steps taken to set up this repository (prior to any merging), so t
 `* 08ba55c added animations file`  
 `* 1af0739 added INSTALL file`  
 `* c4b6c0a Initial commit`  
+
+##Rebase
+
+`git checkout feature#124`  
+`git checkout -b rebase#123onto#124`  
+`git rebase feature#123`  
+`sed -i '' '/[<=>]/d' INSTALL`  
+`git add .`  
+`git rebase --continue`  
+
+`git log --oneline` produces:
+
+`67ac05e updated shaders file`  
+`63445ec updated INSTALL file`  
+`6750b7f added shaders file`  
+`ce8292f updated animations file`  
+`b63ec10 updated INSTALL file`  
+`b4a6eef added animations file`  
+`1af0739 added INSTALL file`  
+`c4b6c0a Initial commit`  
+
+`git log --oneline --graph` produces:
+
+`* 67ac05e updated shaders file`  
+`* 63445ec updated INSTALL file`  
+`* 6750b7f added shaders file`  
+`* ce8292f updated animations file`  
+`* b63ec10 updated INSTALL file`  
+`* b4a6eef added animations file`  
+`* 1af0739 added INSTALL file`  
+`* c4b6c0a Initial commit`  
