@@ -82,6 +82,7 @@ These are the steps taken to set up this repository (prior to any merging), so t
 `git checkout -b rebaseMerge`  
 `git rev-list --reverse ..feature#123 ..feature#124 | git cherry-pick --stdin`  
 `sed -i '' '/[<=>]/d' INSTALL`  
+`git add .`  
 `git cherry-pick --continue`  
 
 `git log --online` produces:
